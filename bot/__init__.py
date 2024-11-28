@@ -452,8 +452,9 @@ if ospath.exists("list_drives.txt"):
                 INDEX_URLS.append("")
 
 if BASE_URL:
+    PORT = environ.get("PORT")
     Popen(
-        f"gunicorn web.wserver:app --bind 0.0.0.0:{BASE_URL_PORT} --worker-class gevent",
+        f"gunicorn web.wserver:app --bind 0.0.0.0:{PORT} --worker-class gevent",
         shell=True,
     )
 

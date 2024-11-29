@@ -11,6 +11,7 @@ accounts/*
 Thumbnails/*
 rclone/*
 tokens/*
+zee_env/*
 list_drives.txt
 cookies.txt
 downloads

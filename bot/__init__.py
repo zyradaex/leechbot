@@ -33,7 +33,7 @@ setdefaulttimeout(600)
 getLogger("qbittorrentapi").setLevel(INFO)
 getLogger("requests").setLevel(INFO)
 getLogger("urllib3").setLevel(INFO)
-getLogger("pyrogram").setLevel(ERROR)
+getLogger("nekozee").setLevel(ERROR)
 getLogger("httpx").setLevel(ERROR)
 getLogger("pymongo").setLevel(ERROR)
 
@@ -49,7 +49,7 @@ LOGGER = getLogger(__name__)
 
 load_dotenv("config.env", override=True)
 
-Intervals = {"status": {}, "qb": "", stopAll": False}
+Intervals = {"status": {}, "qb": "", "stopAll": False}
 QbTorrents = {}
 DRIVES_NAMES = []
 DRIVES_IDS = []
@@ -496,7 +496,6 @@ bot = tgClient(
     bot_token=BOT_TOKEN,
     workers=1000,
     parse_mode=enums.ParseMode.HTML,
-    max_concurrent_transmissions=10,
 ).start()
 bot_loop = bot.loop
 bot_name = bot.me.username

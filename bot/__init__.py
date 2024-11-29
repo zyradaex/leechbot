@@ -33,7 +33,6 @@ setdefaulttimeout(600)
 getLogger("qbittorrentapi").setLevel(INFO)
 getLogger("requests").setLevel(INFO)
 getLogger("urllib3").setLevel(INFO)
-getLogger("nekozee").setLevel(ERROR)
 getLogger("httpx").setLevel(ERROR)
 getLogger("pymongo").setLevel(ERROR)
 

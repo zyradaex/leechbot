@@ -178,7 +178,7 @@ class Clone(TaskListener):
             src_path = src_path.strip("/")
 
             cmd = [
-                "zcl",
+                "cross-suck",
                 "lsjson",
                 "--fast-list",
                 "--stat",
@@ -228,7 +228,7 @@ class Clone(TaskListener):
                 return
             LOGGER.info(f"Cloning Done: {self.name}")
             cmd1 = [
-                "zcl",
+                "cross-suck",
                 "lsf",
                 "--fast-list",
                 "-R",
@@ -238,7 +238,7 @@ class Clone(TaskListener):
                 destination,
             ]
             cmd2 = [
-                "zcl",
+                "cross-suck",
                 "lsf",
                 "--fast-list",
                 "-R",
@@ -248,7 +248,7 @@ class Clone(TaskListener):
                 destination,
             ]
             cmd3 = [
-                "zcl",
+                "cross-suck",
                 "size",
                 "--fast-list",
                 "--json",

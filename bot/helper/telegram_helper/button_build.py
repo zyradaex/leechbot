@@ -1,4 +1,4 @@
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from nekozee.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 class ButtonMaker:

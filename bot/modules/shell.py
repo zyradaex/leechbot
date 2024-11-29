@@ -1,6 +1,6 @@
 from io import BytesIO
-from pyrogram.filters import command
-from pyrogram.handlers import MessageHandler, EditedMessageHandler
+from nekozee.filters import command
+from nekozee.handlers import MessageHandler, EditedMessageHandler
 
 from bot import LOGGER, bot
 from bot.helper.ext_utils.bot_utils import cmd_exec, new_task

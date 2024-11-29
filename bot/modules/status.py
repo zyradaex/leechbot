@@ -1,6 +1,6 @@
 from psutil import cpu_percent, virtual_memory, disk_usage
-from pyrogram.filters import command, regex
-from pyrogram.handlers import MessageHandler, CallbackQueryHandler
+from nekozee.filters import command, regex
+from nekozee.handlers import MessageHandler, CallbackQueryHandler
 from time import time
 
 from bot import (

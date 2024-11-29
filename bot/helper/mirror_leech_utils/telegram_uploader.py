@@ -10,8 +10,8 @@ from asyncio import sleep
 from logging import getLogger
 from natsort import natsorted
 from os import walk, path as ospath
-from pyrogram.errors import FloodWait, RPCError
-from pyrogram.types import InputMediaVideo, InputMediaDocument, InputMediaPhoto
+from nekozee.errors import FloodWait, RPCError
+from nekozee.types import InputMediaVideo, InputMediaDocument, InputMediaPhoto
 from re import match as re_match, sub as re_sub
 from tenacity import (
     retry,

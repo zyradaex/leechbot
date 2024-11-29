@@ -4,8 +4,8 @@ from asyncio import wait_for, Event, wrap_future, gather
 from configparser import ConfigParser
 from functools import partial
 from json import loads
-from pyrogram.filters import regex, user
-from pyrogram.handlers import CallbackQueryHandler
+from nekozee.filters import regex, user
+from nekozee.handlers import CallbackQueryHandler
 from time import time
 
 from bot import LOGGER, config_dict
@@ -217,7 +217,7 @@ class RcloneList:
         elif self.list_status == "rcu":
             self.item_type == "--dirs-only"
         cmd = [
-            "cross-suck",
+            "zcl",
             "lsjson",
             self.item_type,
             "--fast-list",

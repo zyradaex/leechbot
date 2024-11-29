@@ -1,7 +1,7 @@
 from asyncio import gather
 from json import loads
-from pyrogram.filters import command
-from pyrogram.handlers import MessageHandler
+from nekozee.filters import command
+from nekozee.handlers import MessageHandler
 from secrets import token_urlsafe
 
 from bot import LOGGER, task_dict, task_dict_lock, bot
@@ -178,7 +178,7 @@ class Clone(TaskListener):
             src_path = src_path.strip("/")
 
             cmd = [
-                "cross-suck",
+                "zcl",
                 "lsjson",
                 "--fast-list",
                 "--stat",
@@ -228,7 +228,7 @@ class Clone(TaskListener):
                 return
             LOGGER.info(f"Cloning Done: {self.name}")
             cmd1 = [
-                "cross-suck",
+                "zcl",
                 "lsf",
                 "--fast-list",
                 "-R",
@@ -238,7 +238,7 @@ class Clone(TaskListener):
                 destination,
             ]
             cmd2 = [
-                "cross-suck",
+                "zcl",
                 "lsf",
                 "--fast-list",
                 "-R",
@@ -248,7 +248,7 @@ class Clone(TaskListener):
                 destination,
             ]
             cmd3 = [
-                "cross-suck",
+                "zcl",
                 "size",
                 "--fast-list",
                 "--json",

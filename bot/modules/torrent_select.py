@@ -1,6 +1,6 @@
 from aiofiles.os import remove, path as aiopath
-from pyrogram.filters import command, regex
-from pyrogram.handlers import MessageHandler, CallbackQueryHandler
+from nekozee.filters import command, regex
+from nekozee.handlers import MessageHandler, CallbackQueryHandler
 
 from bot import (
     bot,

@@ -1,7 +1,7 @@
 from httpx import AsyncClient
 from html import escape
-from pyrogram.filters import command, regex
-from pyrogram.handlers import MessageHandler, CallbackQueryHandler
+from nekozee.filters import command, regex
+from nekozee.handlers import MessageHandler, CallbackQueryHandler
 from urllib.parse import quote
 
 from bot import bot, LOGGER, config_dict, get_qb_client

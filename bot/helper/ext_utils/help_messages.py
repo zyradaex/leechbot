@@ -1,196 +1,196 @@
-mirror = """<b>Send link along with command line or </b>
+mirror = """<b>Kirim tautan bersama dengan baris perintah atau </b>
 
-/cmd link
+/cmd tautan
 
-<b>By replying to link/file</b>:
+<b>Dengan membalas tautan/file</b>:
 
-/cmd -n new name -e -up upload destination
+/cmd -n nama baru -e -up tujuan unggah
 
-<b>NOTE:</b>
-1. Commands that start with <b>qb</b> are ONLY for torrents."""
+<b>CATATAN:</b>
+1. Perintah yang dimulai dengan <b>qb</b> HANYA untuk torrent."""
 
-yt = """<b>Send link along with command line</b>:
+yt = """<b>Kirim tautan bersama dengan baris perintah</b>:
 
-/cmd link
-<b>By replying to link</b>:
-/cmd -n new name -z password -opt x:y|x1:y1
+/cmd tautan
+<b>Dengan membalas tautan</b>:
+/cmd -n nama baru -z kata sandi -opt x:y|x1:y1
 
-Check here all supported <a href='https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md'>SITES</a>
-Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options."""
+Periksa semua <a href='https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md'>SITUS</a> yang didukung di sini
+Periksa semua opsi api yt-dlp dari <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> ini atau gunakan <a href='https://t.me/mltb_official_channel/177'>script</a> ini untuk mengonversi argumen cli menjadi opsi api."""
 
-clone = """Send Gdrive|Gdot|Filepress|Filebee|Appdrive|Gdflix link or rclone path along with command or by replying to the link/rc_path by command.
-Use -sync to use sync method in rclone. Example: /cmd rcl/rclone_path -up rcl/rclone_path/rc -sync"""
+clone = """Kirim tautan Gdrive|Gdot|Filepress|Filebee|Appdrive|Gdflix atau path rclone bersama dengan perintah atau dengan membalas tautan/rc_path menggunakan perintah.
+Gunakan -sync untuk menggunakan metode sinkronisasi di rclone. Contoh: /cmd rcl/rclone_path -up rcl/rclone_path/rc -sync"""
 
-new_name = """<b>New Name</b>: -n
+new_name = """<b>Nama Baru</b>: -n
 
-/cmd link -n new name
-Note: Doesn't work with torrents"""
+/cmd tautan -n nama baru
+Catatan: Tidak berfungsi dengan torrent"""
 
-multi_link = """<b>Multi links only by replying to first link/file</b>: -i
+multi_link = """<b>Beberapa tautan hanya dengan membalas tautan/file pertama</b>: -i
 
-/cmd -i 10(number of links/files)"""
+/cmd -i 10(jumlah tautan/file)"""
 
-same_dir = """<b>Multi links within same upload directory only by replying to first link/file</b>: -m
+same_dir = """<b>Beberapa tautan dalam direktori unggah yang sama hanya dengan membalas tautan/file pertama</b>: -m
 
-/cmd -i 10(number of links/files) -m folder name (multi message)
-/cmd -b -m folder name (bulk-message/file)"""
+/cmd -i 10(jumlah tautan/file) -m nama folder (multi pesan)
+/cmd -b -m nama folder (bulk-pesan/file)"""
 
-thumb = """<b>Thumbnail for current task</b>: -t
+thumb = """<b>Thumbnail untuk tugas saat ini</b>: -t
 
-/cmd link -t tg-message-link(doc or photo)"""
+/cmd tautan -t tg-link-pesan (dokumen atau foto)"""
 
-split_size = """<b>Split size for current task</b>: -sp
+split_size = """<b>Ukuran pemisahan untuk tugas saat ini</b>: -sp
 
-/cmd link -sp (500mb or 2gb or 4000000000)
-Note: Only mb and gb are supported or write in bytes without unit!"""
+/cmd tautan -sp (500mb atau 2gb atau 4000000000)
+Catatan: Hanya mb dan gb yang didukung atau tulis dalam byte tanpa satuan!"""
 
-upload = """<b>Upload Destination</b>: -up
+upload = """<b>Tujuan Unggah</b>: -up
 
-/cmd link -up rcl/gdl (To select rclone config/token.pickle, remote & path/ gdrive id or Tg id/username)
-You can directly add the upload path: -up remote:dir/subdir or -up (Gdrive_id) or -up id/username
-If DEFAULT_UPLOAD is `rc` then you can pass up: `gd` to upload using gdrive tools to GDRIVE_ID.
-If DEFAULT_UPLOAD is `gd` then you can pass up: `rc` to upload to RCLONE_PATH.
+/cmd tautan -up rcl/gdl (Untuk memilih konfigurasi rclone/token.pickle, remote & path/ gdrive id atau Tg id/username)
+Anda bisa langsung menambahkan path unggahan: -up remote:dir/subdir atau -up (Gdrive_id) atau -up id/username
+Jika DEFAULT_UPLOAD adalah `rc`, Anda bisa menggunakan up: `gd` untuk mengunggah menggunakan alat gdrive ke GDRIVE_ID.
+Jika DEFAULT_UPLOAD adalah `gd`, Anda bisa menggunakan up: `rc` untuk mengunggah ke RCLONE_PATH.
 
-If you want to add path or gdrive manually from your config/token (uploaded from usetting) add mrcc: for rclone and mtp: before the path/gdrive_id without space.
-/cmd link -up mrcc:main:dump or -up mtp:gdrive_id or -up b:id/@username/pm(leech by bot) or -up u:id/@username(leech by user) or -up m:id/@username(mixed leech)
+Jika Anda ingin menambahkan path atau gdrive secara manual dari konfigurasi/token Anda (diunggah dari usetting), tambahkan mrcc: untuk rclone dan mtp: sebelum path/gdrive_id tanpa spasi.
+/cmd tautan -up mrcc:main:dump atau -up mtp:gdrive_id atau -up b:id/@username/pm(leech oleh bot) atau -up u:id/@username(leech oleh pengguna) atau -up m:id/@username(leech campuran)
 
-Incase you want to specify whether using token.pickle or service accounts you can add tp:gdrive_id or sa:gdrive_id or mtp:gdrive_id.
-DEFAULT_UPLOAD doesn't effect on leech cmds.
+Jika Anda ingin menentukan apakah menggunakan token.pickle atau akun layanan, Anda bisa menambahkan tp:gdrive_id atau sa:gdrive_id atau mtp:gdrive_id.
+DEFAULT_UPLOAD tidak mempengaruhi perintah leech.
 """
 
-user_download = """<b>User Download</b>: link
+user_download = """<b>Unduh Pengguna</b>: tautan
 
-/cmd tp:link to download using owner token.pickle incase service account enabled.
-/cmd sa:link to download using service account incase service account disabled.
-/cmd tp:gdrive_id to download using token.pickle and file_id incase service account enabled.
-/cmd sa:gdrive_id to download using service account and file_id incase service account disabled.
-/cmd mtp:gdrive_id or mtp:link to download using user token.pickle uploaded from usetting
-/cmd mrcc:remote:path to download using user rclone config uploaded from usetting"""
+/cmd tp:tautan untuk mengunduh menggunakan token.pickle pemilik jika akun layanan diaktifkan.
+/cmd sa:tautan untuk mengunduh menggunakan akun layanan jika akun layanan dinonaktifkan.
+/cmd tp:gdrive_id untuk mengunduh menggunakan token.pickle dan file_id jika akun layanan diaktifkan.
+/cmd sa:gdrive_id untuk mengunduh menggunakan akun layanan dan file_id jika akun layanan dinonaktifkan.
+/cmd mtp:gdrive_id atau mtp:tautan untuk mengunduh menggunakan token.pickle pengguna yang diunggah dari usetting
+/cmd mrcc:remote:path untuk mengunduh menggunakan konfigurasi rclone pengguna yang diunggah dari usetting"""
 
-rcf = """<b>Rclone Flags</b>: -rcf
+rcf = """<b>Flag Rclone</b>: -rcf
 
-/cmd link|path|rcl -up path|rcl -rcf --buffer-size:8M|--drive-starred-only|key|key:value
-This will override all other flags except --exclude
-Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>."""
+/cmd tautan|path|rcl -up path|rcl -rcf --buffer-size:8M|--drive-starred-only|key|key:value
+Ini akan menggantikan semua flag lainnya kecuali --exclude
+Periksa semua <a href='https://rclone.org/flags/'>RcloneFlags</a>."""
 
-bulk = """<b>Bulk Download</b>: -b
+bulk = """<b>Unduhan Massal</b>: -b
 
-Bulk can be used by text message and by replying to text file contains links seperated by new line.
-You can use it only by reply to message(text/file).
-Example:
-link1 -n new name -up remote1:path1 -rcf |key:value|key:value
-link2 -z -n new name -up remote2:path2
-link3 -e -n new name -up remote2:path2
-Reply to this example by this cmd -> /cmd -b(bulk) or /cmd -b -m folder name
-You can set start and end of the links from the bulk like seed, with -b start:end or only end by -b :end or only start by -b start.
-The default start is from zero(first link) to inf."""
+Bulk dapat digunakan melalui pesan teks dan dengan membalas file teks yang berisi tautan yang dipisahkan dengan baris baru.
+Anda hanya bisa menggunakannya dengan membalas pesan (teks/file).
+Contoh:
+tautan1 -n nama baru -up remote1:path1 -rcf |key:value|key:value
+tautan2 -z -n nama baru -up remote2:path2
+tautan3 -e -n nama baru -up remote2:path2
+Balas ke contoh ini dengan perintah ini -> /cmd -b(bulk) atau /cmd -b -m nama folder
+Anda bisa menetapkan awal dan akhir dari tautan dalam bulk seperti seed, dengan -b start:end atau hanya akhir dengan -b :end atau hanya awal dengan -b start.
+Awal default adalah dari nol (tautan pertama) hingga tak terhingga."""
 
-rlone_dl = """<b>Rclone Download</b>:
+rlone_dl = """<b>Unduhan Rclone</b>:
 
-Treat rclone paths exactly like links
-/cmd main:dump/ubuntu.iso or rcl(To select config, remote and path)
-Users can add their own rclone from user settings
-If you want to add path manually from your config add mrcc: before the path without space
+Perlakukan path rclone persis seperti tautan
+/cmd main:dump/ubuntu.iso atau rcl (Untuk memilih konfigurasi, remote, dan path)
+Pengguna dapat menambahkan rclone mereka sendiri dari pengaturan pengguna
+Jika Anda ingin menambahkan path secara manual dari konfigurasi Anda, tambahkan mrcc: sebelum path tanpa spasi
 /cmd mrcc:main:dump/ubuntu.iso"""
 
-extract_zip = """<b>Extract/Zip</b>: -e -z
+extract_zip = """<b>Ekstrak/Zip</b>: -e -z
 
-/cmd link -e password (extract password protected)
-/cmd link -z password (zip password protected)
-/cmd link -z password -e (extract and zip password protected)
-Note: When both extract and zip added with cmd it will extract first and then zip, so always extract first"""
+/cmd tautan -e kata_sandi (untuk mengekstrak yang dilindungi kata sandi)
+/cmd tautan -z kata_sandi (untuk zip yang dilindungi kata sandi)
+/cmd tautan -z kata_sandi -e (untuk mengekstrak dan zip yang dilindungi kata sandi)
+Catatan: Ketika ekstrak dan zip ditambahkan dengan perintah, ekstrak akan dilakukan terlebih dahulu dan kemudian zip, jadi selalu ekstrak terlebih dahulu"""
 
-join = """<b>Join Splitted Files</b>: -j
+join = """<b>Gabungkan File Terpisah</b>: -j
 
-This option will only work before extract and zip, so mostly it will be used with -m argument (samedir)
-By Reply:
-/cmd -i 3 -j -m folder name
-/cmd -b -j -m folder name
-if u have link(folder) have splitted files:
-/cmd link -j"""
+Opsi ini hanya akan berfungsi sebelum ekstrak dan zip, jadi sebagian besar akan digunakan dengan argumen -m (samedir)
+Dengan Membalas:
+/cmd -i 3 -j -m nama folder
+/cmd -b -j -m nama folder
+Jika Anda memiliki tautan (folder) yang memiliki file terpisah:
+/cmd tautan -j"""
 
-tg_links = """<b>TG Links</b>:
+tg_links = """<b>Tautan TG</b>:
 
-Treat links like any direct link
-Some links need user access so sure you must add USER_SESSION_STRING for it.
-Three types of links:
-Public: https://t.me/channel_name/message_id
-Private: tg://openmessage?user_id=xxxxxx&message_id=xxxxx
+Perlakukan tautan seperti tautan langsung lainnya
+Beberapa tautan memerlukan akses pengguna, jadi pastikan Anda menambahkan USER_SESSION_STRING untuk itu.
+Tiga jenis tautan:
+Publik: https://t.me/channel_name/message_id
+Pribadi: tg://openmessage?user_id=xxxxxx&message_id=xxxxx
 Super: https://t.me/c/channel_id/message_id
-Range: https://t.me/channel_name/first_message_id-last_message_id
-Range Example: tg://openmessage?user_id=xxxxxx&message_id=555-560 or https://t.me/channel_name/100-150
-Note: Range link will work only by replying cmd to it"""
+Rentang: https://t.me/channel_name/first_message_id-last_message_id
+Contoh Rentang: tg://openmessage?user_id=xxxxxx&message_id=555-560 atau https://t.me/channel_name/100-150
+Catatan: Tautan rentang hanya akan berfungsi dengan membalas perintah ke tautan tersebut"""
 
-sample_video = """<b>Sample Video</b>: -sv
+sample_video = """<b>Video Sampel</b>: -sv
 
-Create sample video for one video or folder of vidoes.
-/cmd -sv (it will take the default values which 60sec sample duration and part duration is 4sec).
-You can control those values. Example: /cmd -sv 70:5(sample-duration:part-duration) or /cmd -sv :5 or /cmd -sv 70."""
+Buat video sampel untuk satu video atau folder video.
+/cmd -sv (ini akan mengambil nilai default yaitu durasi sampel 60 detik dan durasi bagian 4 detik).
+Anda bisa mengontrol nilai-nilai tersebut. Contoh: /cmd -sv 70:5(durasi-sampel:durasi-bagian) atau /cmd -sv :5 atau /cmd -sv 70."""
 
-screenshot = """<b>ScreenShots</b>: -ss
+screenshot = """<b>Tangkapan Layar</b>: -ss
 
-Create up to 10 screenshots for one video or folder of vidoes.
-/cmd -ss (it will take the default values which is 10 photos).
-You can control this value. Example: /cmd -ss 6."""
+Buat hingga 10 tangkapan layar untuk satu video atau folder video.
+/cmd -ss (ini akan mengambil nilai default yaitu 10 foto).
+Anda bisa mengontrol nilai ini. Contoh: /cmd -ss 6."""
 
-seed = """<b>Bittorrent seed</b>: -d
+seed = """<b>Seed Bittorrent</b>: -d
 
-/cmd link -d ratio:seed_time or by replying to file/link
-To specify ratio and seed time add -d ratio:time.
-Example: -d 0.7:10 (ratio and time) or -d 0.7 (only ratio) or -d :10 (only time) where time in minutes"""
+/cmd tautan -d rasio:waktu_seed atau dengan membalas file/tautan
+Untuk menentukan rasio dan waktu seed, tambahkan -d rasio:waktu.
+Contoh: -d 0.7:10 (rasio dan waktu) atau -d 0.7 (hanya rasio) atau -d :10 (hanya waktu) di mana waktu dalam menit"""
 
-zip_arg = """<b>Zip</b>: -z password
+zip_arg = """<b>Zip</b>: -z kata_sandi
 
-/cmd link -z (zip)
-/cmd link -z password (zip password protected)"""
+/cmd tautan -z (zip)
+/cmd tautan -z kata_sandi (zip yang dilindungi kata sandi)"""
 
-qual = """<b>Quality Buttons</b>: -s
+qual = """<b>Tombol Kualitas</b>: -s
 
-Incase default quality added from yt-dlp options using format option and you need to select quality for specific link or links with multi links feature.
-/cmd link -s"""
+Jika kualitas default ditambahkan dari opsi yt-dlp menggunakan opsi format dan Anda perlu memilih kualitas untuk tautan tertentu atau tautan dengan fitur multi tautan.
+/cmd tautan -s"""
 
-yt_opt = """<b>Options</b>: -opt
+yt_opt = """<b>Opsi</b>: -opt
 
-/cmd link -opt playliststart:^10|fragment_retries:^inf|matchtitle:S13|writesubtitles:true|live_from_start:true|postprocessor_args:{"ffmpeg": ["-threads", "4"]}|wait_for_video:(5, 100)
-Note: Add `^` before integer or float, some values must be numeric and some string.
-Like playlist_items:10 works with string, so no need to add `^` before the number but playlistend works only with integer so you must add `^` before the number like example above.
-You can add tuple and dict also. Use double quotes inside dict."""
+/cmd tautan -opt playliststart:^10|fragment_retries:^inf|matchtitle:S13|writesubtitles:true|live_from_start:true|postprocessor_args:{"ffmpeg": ["-threads", "4"]}|wait_for_video:(5, 100)
+Catatan: Tambahkan `^` sebelum bilangan bulat atau pecahan, beberapa nilai harus numerik dan beberapa string.
+Seperti playlist_items:10 bekerja dengan string, jadi tidak perlu menambahkan `^` sebelum angka, tetapi playlistend hanya bekerja dengan bilangan bulat sehingga Anda harus menambahkan `^` sebelum angka seperti contoh di atas.
+Anda juga dapat menambahkan tuple dan dict. Gunakan tanda kutip ganda di dalam dict."""
 
-convert_media = """<b>Convert Media</b>: -ca -cv
-/cmd link -ca mp3 -cv mp4 (convert all audios to mp3 and all videos to mp4)
-/cmd link -ca mp3 (convert all audios to mp3)
-/cmd link -cv mp4 (convert all videos to mp4)
-/cmd link -ca mp3 + flac ogg (convert only flac and ogg audios to mp3)
-/cmd link -cv mkv - webm flv (convert all videos to mp4 except webm and flv)"""
+convert_media = """<b>Konversi Media</b>: -ca -cv
+/cmd tautan -ca mp3 -cv mp4 (konversi semua audio ke mp3 dan semua video ke mp4)
+/cmd tautan -ca mp3 (konversi semua audio ke mp3)
+/cmd tautan -cv mp4 (konversi semua video ke mp4)
+/cmd tautan -ca mp3 + flac ogg (konversi hanya audio flac dan ogg ke mp3)
+/cmd tautan -cv mkv - webm flv (konversi semua video ke mp4 kecuali webm dan flv)"""
 
-force_start = """<b>Force Start</b>: -f -fd -fu
-/cmd link -f (force downlaod and upload)
-/cmd link -fd (force download only)
-/cmd link -fu (force upload directly after download finish)"""
+force_start = """<b>Mulai Paksa</b>: -f -fd -fu
+/cmd tautan -f (paksa unduh dan unggah)
+/cmd tautan -fd (paksa unduh saja)
+/cmd tautan -fu (paksa unggah langsung setelah unduhan selesai)"""
 
-gdrive = """<b>Gdrive</b>: link
-If DEFAULT_UPLOAD is `rc` then you can pass up: `gd` to upload using gdrive tools to GDRIVE_ID.
-/cmd gdriveLink or gdl or gdriveId -up gdl or gdriveId or gd
-/cmd tp:gdriveLink or tp:gdriveId -up tp:gdriveId or gdl or gd (to use token.pickle if service account enabled)
-/cmd sa:gdriveLink or sa:gdriveId -p sa:gdriveId or gdl or gd (to use service account if service account disabled)
-/cmd mtp:gdriveLink or mtp:gdriveId -up mtp:gdriveId or gdl or gd(if you have added upload gdriveId from usetting) (to use user token.pickle that uploaded by usetting)"""
+gdrive = """<b>Gdrive</b>: tautan
+Jika DEFAULT_UPLOAD adalah `rc`, maka Anda dapat menggunakan up: `gd` untuk mengunggah menggunakan alat gdrive ke GDRIVE_ID.
+/cmd tautanGdrive atau gdl atau gdriveId -up gdl atau gdriveId atau gd
+/cmd tp:tautanGdrive atau tp:gdriveId -up tp:gdriveId atau gdl atau gd (untuk menggunakan token.pickle jika akun layanan diaktifkan)
+/cmd sa:tautanGdrive atau sa:gdriveId -p sa:gdriveId atau gdl atau gd (untuk menggunakan akun layanan jika akun layanan dinonaktifkan)
+/cmd mtp:tautanGdrive atau mtp:gdriveId -up mtp:gdriveId atau gdl atau gd (jika Anda telah menambahkan upload gdriveId dari usetting) (untuk menggunakan token.pickle pengguna yang diunggah oleh usetting)"""
 
 rclone_cl = """<b>Rclone</b>: path
-If DEFAULT_UPLOAD is `gd` then you can pass up: `rc` to upload to RCLONE_PATH.
+Jika DEFAULT_UPLOAD adalah `gd`, maka Anda dapat menggunakan up: `rc` untuk mengunggah ke RCLONE_PATH.
 /cmd rcl/rclone_path -up rcl/rclone_path/rc -rcf flagkey:flagvalue|flagkey|flagkey:flagvalue
-/cmd rcl or rclonePath -up rclonePath or rc or rcl
-/cmd mrcc:rclonePath -up rcl or rc(if you have add rclone path from usetting) (to use user config)"""
+/cmd rcl atau rclonePath -up rclonePath atau rc atau rcl
+/cmd mrcc:rclonePath -up rcl atau rc (jika Anda telah menambahkan rclone path dari usetting) (untuk menggunakan konfigurasi pengguna)"""
 
-name_sub = """<b>Name Substitution</b>: -ns
-/cmd link -ns tea : coffee : s|ACC :  : s|mP4
-This will effect on all files. Formate: wordToReplace : wordToReplaceWith : sensitiveCase
-1. tea will get replaced by coffee with sensitive case because I have added `s` last of the option.
-2. ACC will get removed because I have added nothing between to replace with sensitive case because I have added `s` last of the option.
-3. mP4 will get removed because I have added nothing to replace with
+name_sub = """<b>Penggantian Nama</b>: -ns
+/cmd tautan -ns tea : coffee : s|ACC :  : s|mP4
+Ini akan mempengaruhi semua file. Format: kataYangDiganti : kataPengganti : sensitifKasus
+1. tea akan diganti dengan coffee, sensitif terhadap huruf besar/kecil karena saya menambahkan `s` di akhir opsi.
+2. ACC akan dihapus karena saya tidak menambahkan apa-apa di bagian pengganti, sensitif terhadap huruf besar/kecil karena saya menambahkan `s` di akhir opsi.
+3. mP4 akan dihapus karena saya tidak menambahkan pengganti sama sekali.
 """
 
-mixed_leech = """Mixed leech: -ml
-/cmd link -ml (leech by user and bot sessionwith respect to size)"""
+mixed_leech = """Leech Campuran: -ml
+/cmd tautan -ml (leech dari sesi pengguna dan bot sesuai ukuran)"""
 
 YT_HELP_DICT = {
     "main": yt,
@@ -249,32 +249,33 @@ CLONE_HELP_DICT = {
 }
 
 RSS_HELP_MESSAGE = """
-Use this format to add feed url:
-Title1 link (required)
-Title2 link -c cmd -inf xx -exf xx
-Title3 link -c cmd -d ratio:time -z password
+Gunakan format ini untuk menambahkan URL feed:
+Judul1 tautan (wajib)
+Judul2 tautan -c cmd -inf xx -exf xx
+Judul3 tautan -c cmd -d rasio:waktu -z password
 
--c command -up mrcc:remote:path/subdir -rcf --buffer-size:8M|key|key:value
--inf For included words filter.
--exf For excluded words filter.
--stv true or false (sensitive filter)
+-c perintah -up mrcc:remote:path/subdir -rcf --buffer-size:8M|key|key:value
+-inf Untuk filter kata yang disertakan.
+-exf Untuk filter kata yang dikecualikan.
+-stv true atau false (filter sensitif)
 
-Example: Title https://www.rss-url.com -inf 1080 or 720 or 144p|mkv or mp4|hevc -exf flv or web|xxx
-This filter will parse links that it's titles contains `(1080 or 720 or 144p) and (mkv or mp4) and hevc` and doesn't conyain (flv or web) and xxx` words. You can add whatever you want.
+Contoh: Judul https://www.rss-url.com -inf 1080 atau 720 atau 144p|mkv atau mp4|hevc -exf flv atau web|xxx
+Filter ini akan memparsing tautan yang judulnya mengandung `(1080 atau 720 atau 144p) dan (mkv atau mp4) dan hevc` dan tidak mengandung (flv atau web) dan xxx. Kamu bisa menambahkan apa saja yang kamu mau.
 
-Another example: -inf  1080  or 720p|.web. or .webrip.|hvec or x264. This will parse titles that contains ( 1080  or 720p) and (.web. or .webrip.) and (hvec or x264). I have added space before and after 1080 to avoid wrong matching. If this `10805695` number in title it will match 1080 if added 1080 without spaces after it.
+Contoh lain: -inf 1080 atau 720p|.web. atau .webrip.|hvec atau x264. Ini akan memparsing judul yang mengandung (1080 atau 720p) dan (.web. atau .webrip.) dan (hvec atau x264). Saya menambahkan spasi sebelum dan sesudah 1080 untuk menghindari pencocokan yang salah. Jika ada angka `10805695` di judul, itu akan mencocokkan 1080 jika ditambahkan 1080 tanpa spasi setelahnya.
 
-Filter Notes:
-1. | means and.
-2. Add `or` between similar keys, you can add it between qualities or between extensions, so don't add filter like this f: 1080|mp4 or 720|web because this will parse 1080 and (mp4 or 720) and web ... not (1080 and mp4) or (720 and web)."
-3. You can add `or` and `|` as much as you want."
-4. Take look on title if it has static special character after or before the qualities or extensions or whatever and use them in filter to avoid wrong match.
-Timeout: 60 sec.
+Catatan Filter:
+1. | artinya dan.
+2. Tambahkan `or` antara kunci yang mirip, kamu bisa menambahkannya antara kualitas atau antara ekstensi, jadi jangan menambahkan filter seperti ini f: 1080|mp4 atau 720|web karena ini akan memparsing 1080 dan (mp4 atau 720) dan web ... bukan (1080 dan mp4) atau (720 dan web).
+3. Kamu bisa menambahkan `or` dan `|` sebanyak yang kamu mau.
+4. Perhatikan judul jika ada karakter khusus statis setelah atau sebelum kualitas atau ekstensi atau apapun, dan gunakan karakter tersebut dalam filter untuk menghindari pencocokan yang salah.
+Timeout: 60 detik.
 """
 
 PASSWORD_ERROR_MESSAGE = """
 <b>This link requires a password!</b>
-- Insert <b>::</b> after the link and write the password after the sign.
+- Masukkan <b>::</b> setelah tautan dan tulis kata sandinya setelah tanda tersebut.
 
-<b>Example:</b> link::my password
+<b>Contoh:</b> tautan::kata sandiku
 """
+

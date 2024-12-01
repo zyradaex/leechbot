@@ -3,8 +3,9 @@ from asyncio import sleep
 from functools import partial
 from html import escape
 from io import BytesIO
-from os import getcwd
+from os import getcwd, path as ospath
 from pyrogram.filters import command, regex, create
+from pyrogram.types import InputMediaPhoto
 from pyrogram.handlers import MessageHandler, CallbackQueryHandler
 from time import time
 
@@ -17,7 +18,7 @@ from bot import (
     MAX_SPLIT_SIZE,
     GLOBAL_EXTENSION_FILTER,
 )
-from bot.helper.ext_utils.bot_utils import update_user_ldata, new_thread, getSizeBytes
+from bot.helper.ext_utils.bot_utils import update_user_ldata, new_thread, new_task, getSizeBytes
 from bot.helper.ext_utils.db_handler import DbManager
 from bot.helper.ext_utils.media_utils import createThumb
 from bot.helper.telegram_helper.bot_commands import BotCommands
@@ -198,16 +199,40 @@ YT-DLP Options is <b><code>{escape(ytopt)}</code></b>"""
     return text, buttons.build_menu(1)
 
 
+@new_task
 async def update_user_settings(query):
     msg, button = await get_user_settings(query.from_user)
-    await editMessage(query.message, msg, button)
+    user_id = query.from_user.id
+    media = (
+        f"Thumbnails/{user_id}.jpg"
+        if ospath.exists(f"Thumbnails/{user_id}.jpg")
+        else f"https://i.pinimg.com/736x/77/63/62/776362d3c857710fe7ece4fc552de23c.jpg"
+    )
+    await query.message.edit_media(
+        media=InputMediaPhoto(
+            media=media,
+            caption=msg
+        ),
+        reply_markup=button
+    )
 
 
+@new_task
 async def user_settings(_, message):
     from_user = message.from_user
     handler_dict[from_user.id] = False
+    user_id = from_user.id
     msg, button = await get_user_settings(from_user)
-    await sendMessage(message, msg, button)
+    media = (
+        f"Thumbnails/{user_id}.jpg"
+        if ospath.exists(f"Thumbnails/{user_id}.jpg")
+        else f"https://i.pinimg.com/736x/77/63/62/776362d3c857710fe7ece4fc552de23c.jpg"
+    )
+    await message.reply_photo(
+        media,
+        caption=msg,
+        reply_markup=button
+    )
 
 
 async def set_thumb(_, message, pre_event):
